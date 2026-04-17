@@ -42,6 +42,9 @@ export function loadPage(slug: string): PageContent {
   const bodyMatch = raw.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   let body = bodyMatch ? bodyMatch[1] : '';
 
+  body = body.replace(/<nav[\s\S]*?<\/nav>/i, '');
+  body = body.replace(/<footer[\s\S]*?<\/footer>/i, '');
+
   for (const [from, to] of Object.entries(LINK_REWRITES)) {
     const re = new RegExp(`href="${from.replace('.', '\\.')}"`, 'g');
     body = body.replace(re, `href="${to}"`);
