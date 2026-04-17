@@ -24,7 +24,7 @@ navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Mega menu is a standalone page (mega-menu.html) — no JS needed here
+// Mega menu is a standalone page (services.html) — no JS needed here
 
 // Close mobile menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
