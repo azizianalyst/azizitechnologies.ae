@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azizi Technologies Bur Dubai — IT Center Building | Walk-In Repair, Buy & Sell | 34 Service Areas</title>
+  <meta name="description" content="Azizi Technologies Bur Dubai location. IT Center Building, G 58, 21 21A St. Walk-in MacBook, iPhone, laptop repair. Refurbished devices. 862 services. 34 service areas. Mon-Sat 9AM-10PM. 055 753 0104.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .loc-info { padding: 60px 0; }
+    .loc-info--alt { background: var(--gray-6); }
+    .loc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .loc-card { background: var(--white); border: 1px solid rgba(217,223,229,.6); border-radius: 12px; padding: 20px; }
+    .loc-card__label { font-family: 'Manrope', sans-serif; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--primary); margin-bottom: 8px; }
+    .loc-card__value { font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 700; color: var(--dark); }
+    .loc-card__sub { font-size: .8rem; color: var(--gray-2); margin-top: 4px; }
+    .attr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+    .attr-item { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: var(--white); border: 1px solid rgba(217,223,229,.6); border-radius: 10px; font-size: .8rem; color: var(--dark); }
+    .attr-item__icon { font-size: 1rem; }
+    .attr-item--yes .attr-item__icon { color: #10b981; }
+    .attr-item--no .attr-item__icon { color: var(--gray-3); }
+    .area-table { width: 100%; border-collapse: collapse; font-size: .8rem; }
+    .area-table th { text-align: left; padding: 10px 12px; font-family: 'Manrope', sans-serif; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-2); background: var(--gray-6); border-bottom: 1px solid var(--gray-4); }
+    .area-table td { padding: 10px 12px; border-bottom: 1px solid rgba(217,223,229,.4); color: var(--dark); }
+    .area-table tr:hover td { background: rgba(47,175,251,.03); }
+    .area-badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: .6rem; font-weight: 700; }
+    .area-badge--critical { background: rgba(239,68,68,.08); color: #dc2626; }
+    .area-badge--high { background: rgba(245,158,11,.08); color: #d97706; }
+    .area-badge--medium { background: rgba(47,175,251,.08); color: var(--primary); }
+    .creek-cta { background: linear-gradient(135deg, var(--dark) 0%, #1a2d4d 100%); border-radius: 16px; padding: 32px; margin-top: 32px; }
+    .creek-cta h3 { font-family: 'Manrope', sans-serif; font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .creek-cta p { font-size: .85rem; color: rgba(255,255,255,.6); line-height: 1.6; margin-bottom: 16px; }
+    .creek-cta a { display: inline-block; padding: 10px 24px; background: var(--primary); color: #fff; border-radius: 10px; font-family: 'Manrope', sans-serif; font-size: .85rem; font-weight: 700; text-decoration: none; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["ComputerRepairService", "Store"],
+  "name": "Azizi Technologies",
+  "url": "https://azizitechnologies.ae",
+  "logo": "https://azizitechnologies.ae/images/azizi-technologies-logo.webp",
+  "image": [
+    "https://azizitechnologies.ae/images/it-center-building-bur-dubai-azizi.webp",
+    "https://azizitechnologies.ae/images/macbook-repair-bur-dubai-azizi.webp",
+    "https://azizitechnologies.ae/images/iphone-screen-repair-bur-dubai-azizi.webp",
+    "https://azizitechnologies.ae/images/refurbished-macbook-display-bur-dubai.webp"
+  ],
+  "description": "Walk-in MacBook repair, iPhone repair, Samsung repair, laptop repair, data recovery and certified refurbished devices in Bur Dubai. MacBook screen from AED 650, iPhone screen from AED 250, laptop screen from AED 250. Free diagnosis. 90-day warranty on all repairs. Certified refurbished MacBooks from AED 1,599, laptops from AED 900. We buy Apple devices for instant cash. 642 Google reviews, 4.9 stars. Open Mon-Sat 9AM-10PM including Fridays. Near BurJuman Metro. IT Center Building, 21 21A St, Bur Dubai.",
+  "telephone": "+971557530104",
+  "email": "info@azizitechnologies.ae",
+  "priceRange": "AED 150-5000",
+  "foundingDate": "2007",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "G 58, IT Center Building, 21 21A St, Al Souq Al Kabeer",
+    "addressLocality": "Bur Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.2631,
+    "longitude": 55.2943
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "09:00",
+    "closes": "22:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "642",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "areaServed": ["Bur Dubai","Karama","Al Mankhool","Oud Metha","Deira","Dubai Creek Harbour","Business Bay","Downtown Dubai","DIFC","Al Fahidi","Zabeel","Healthcare City","Festival City","Jumeirah","Al Garhoud","Dubai"],
+  "knowsAbout": ["MacBook Repair","iPhone Repair","Samsung Repair","Laptop Repair","Phone Screen Replacement","Data Recovery","Refurbished MacBook","Refurbished Laptops","Apple Device Buyback","iPad Repair","Gaming Console Repair","Printer Repair","Computer Repair","IT Support","CCTV Installation"],
+  "hasMap": "https://maps.google.com/?q=G+58+IT+Center+Building+Bur+Dubai",
+  "currenciesAccepted": "AED",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, Apple Pay, NFC, Bank Transfer",
+  "sameAs": ["https://www.facebook.com/AziziTechnologies","https://www.linkedin.com/company/azizi-technologies","https://www.instagram.com/azizitechnologies","https://g.page/azizitechnologies","https://hidubai.com/businesses/azizi-technologies","https://azizitechnologies.ae"],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+971557530104",
+    "contactType": "customer service",
+    "areaServed": "AE",
+    "availableLanguage": ["English","Arabic","Hindi","Urdu"]
+  },{
+    "@type": "ContactPoint",
+    "telephone": "+971557530104",
+    "contactType": "technical support",
+    "areaServed": "AE",
+    "availableLanguage": ["English","Arabic","Hindi","Urdu"]
+  }]
+}
+</script>
+</head>
+<body>
+  <nav class="nav" id="nav"><div class="nav__inner">
+    <a href="index.html" class="nav__logo"><span class="nav__logo-icon">&#9670;</span> AZIZI <span class="nav__logo-accent">TECHNOLOGIES</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                      <ul class="nav__links" id="navLinks">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li><a href="faq-bur-dubai.html">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+971557530104" class="nav__cta">055 753 0104</a></li>
+      </ul>
+  </div></nav>
+
+  <header class="hero" id="hero"><div class="hero__bg"></div><div class="hero__content">
+    <div class="hero__badge">Location 2 — IT Center Building, Bur Dubai</div>
+    <h1 class="hero__title">Azizi Technologies<br><span class="hero__title-accent">Bur Dubai Walk-In</span></h1>
+    <p class="hero__sub">Ground floor walk-in repair shop. MacBook, iPhone, laptop, gaming console, electronics. Buy & sell refurbished devices. 34 service areas across Dubai.</p>
+    <div class="hero__stats">
+      <div class="hero__stat"><span class="hero__stat-num">862</span><span class="hero__stat-label">Services</span></div>
+      <div class="hero__stat"><span class="hero__stat-num">34</span><span class="hero__stat-label">Service Areas</span></div>
+      <div class="hero__stat"><span class="hero__stat-num">9AM–10PM</span><span class="hero__stat-label">Mon–Sat</span></div>
+      <div class="hero__stat"><span class="hero__stat-num">Walk-In</span><span class="hero__stat-label">No Appointment</span></div>
+    </div>
+    <div class="hero__actions">
+      <a href="tel:+971557530104" class="btn btn--primary btn--lg">Call 055 753 0104</a>
+      <a href="faq-bur-dubai.html" class="btn btn--outline btn--lg">View FAQ</a>
+    </div>
+    <p class="hero__location">G 58, IT Center Building, 21 21A St, Bur Dubai&ensp;|&ensp;Near BurJuman Metro</p>
+  </div></header>
+
+  <!-- Location Details -->
+  <section class="loc-info">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Location Details</span>
+        <h2 class="section-header__title">IT Center Building, Bur Dubai</h2>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-card"><div class="loc-card__label">Address</div><div class="loc-card__value">G 58, IT Center Building</div><div class="loc-card__sub">21 21A Street, Al Souq Al Kabeer, Bur Dubai, Dubai, UAE</div></div>
+        <div class="loc-card"><div class="loc-card__label">GPS Coordinates</div><div class="loc-card__value">25.2631°N, 55.2943°E</div><div class="loc-card__sub">Ground floor — street-level walk-in</div></div>
+        <div class="loc-card"><div class="loc-card__label">Opening Hours</div><div class="loc-card__value">Mon–Sat: 9AM – 10PM</div><div class="loc-card__sub">Including Fridays. Sunday closed.</div></div>
+        <div class="loc-card"><div class="loc-card__label">Nearest Metro</div><div class="loc-card__value">BurJuman Metro Station</div><div class="loc-card__sub">5-minute walk along 21 21A Street</div></div>
+        <div class="loc-card"><div class="loc-card__label">Phone</div><div class="loc-card__value"><a href="tel:+971557530104" style="color:var(--primary)">055 753 0104</a></div><div class="loc-card__sub">Call or WhatsApp</div></div>
+        <div class="loc-card"><div class="loc-card__label">Parking</div><div class="loc-card__value">Street parking (RTA meters)</div><div class="loc-card__sub">21 21A St and surrounding roads. Paid lots within 3 min walk.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attributes -->
+  <section class="loc-info loc-info--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">GBP Attributes</span>
+        <h2 class="section-header__title">Business Attributes — 29 Enabled</h2>
+        <p class="section-header__sub">Ground floor walk-in shop. All key attributes enabled.</p>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Service Options</span></div>
+      <div class="attr-grid" style="margin-bottom:32px">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>On-site services</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Online estimates</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Online appointments</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Same-day service</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Free estimates</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Walk-ins welcome</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>In-store pickup</div>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Accessibility</span></div>
+      <div class="attr-grid" style="margin-bottom:32px">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Wheelchair accessible entrance</div>
+        <div class="attr-item attr-item--no"><span class="attr-item__icon">—</span>Ground floor — direct entry</div>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Planning</span></div>
+      <div class="attr-grid" style="margin-bottom:32px">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Walk-ins welcome</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Quick visit (under 30 min)</div>
+        <div class="attr-item attr-item--no"><span class="attr-item__icon">❌</span>Appointments NOT required</div>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Payments</span></div>
+      <div class="attr-grid" style="margin-bottom:32px">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Cash</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Credit cards</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Debit cards</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>NFC / Apple Pay</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Bank transfer</div>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Amenities &amp; Languages</span></div>
+      <div class="attr-grid" style="margin-bottom:32px">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Free Wi-Fi</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Waiting area</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Air conditioning</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">🇬🇧</span>English</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">🇦🇪</span>Arabic</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">🇮🇳</span>Hindi</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">🇵🇰</span>Urdu</div>
+      </div>
+
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Highlights</span></div>
+      <div class="attr-grid">
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Repair services</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Trained staff</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Second-hand goods</div>
+        <div class="attr-item attr-item--yes"><span class="attr-item__icon">✅</span>Locally owned</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="loc-info">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Service Coverage</span>
+        <h2 class="section-header__title">34 Service Areas — 5 Tiers</h2>
+        <p class="section-header__sub">Combined coverage with Media City location covers all of Dubai.</p>
+      </div>
+
+      <!-- Tier 1 -->
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Tier 1 — Immediate (0–3km)</span></div>
+      <div style="overflow-x:auto;margin-bottom:32px">
+        <table class="area-table">
+          <thead><tr><th>#</th><th>Area</th><th>Distance</th><th>Mix</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><strong>Bur Dubai</strong></td><td>0 min</td><td>B2C heavy</td><td><span class="area-badge area-badge--critical">CRITICAL</span></td></tr>
+            <tr><td>2</td><td><strong>Al Souq Al Kabeer</strong></td><td>0 min</td><td>B2C heavy</td><td><span class="area-badge area-badge--critical">CRITICAL</span></td></tr>
+            <tr><td>3</td><td><strong>Al Fahidi</strong></td><td>3 min</td><td>B2C / tourism</td><td><span class="area-badge area-badge--critical">CRITICAL</span></td></tr>
+            <tr><td>4</td><td><strong>Al Mankhool</strong></td><td>5 min</td><td>Residential</td><td><span class="area-badge area-badge--critical">CRITICAL</span></td></tr>
+            <tr><td>5</td><td><strong>Karama</strong></td><td>5 min</td><td>B2C heavy</td><td><span class="area-badge area-badge--critical">CRITICAL</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Tier 2 — Near (3–7km)</span></div>
+      <div style="overflow-x:auto;margin-bottom:32px">
+        <table class="area-table">
+          <thead><tr><th>#</th><th>Area</th><th>Distance</th><th>Mix</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>6</td><td><strong>Oud Metha</strong></td><td>7 min</td><td>Medical / residential</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>7</td><td><strong>Umm Hurair</strong></td><td>8 min</td><td>Residential</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>8</td><td><strong>Zabeel</strong></td><td>8 min</td><td>Government</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>9</td><td><strong>Deira</strong></td><td>10 min</td><td>B2C / B2B mixed</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>10</td><td><strong>Al Rigga</strong></td><td>10 min</td><td>Residential / retail</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>11</td><td><strong>Naif</strong></td><td>10 min</td><td>Residential / retail</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>12</td><td><strong>Dubai Creek Harbour</strong></td><td>10 min</td><td>Premium residential</td><td><span class="area-badge area-badge--high">HIGH ★</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Tier 3 — Mid-Range (7–15km)</span></div>
+      <div style="overflow-x:auto;margin-bottom:32px">
+        <table class="area-table">
+          <thead><tr><th>#</th><th>Area</th><th>Distance</th><th>Mix</th><th>Priority</th></tr></thead>
+          <tbody>
+            <tr><td>13</td><td><strong>Business Bay</strong></td><td>12 min</td><td>B2B heavy</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>14</td><td><strong>Downtown Dubai</strong></td><td>13 min</td><td>B2C / B2B</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>15</td><td><strong>DIFC</strong></td><td>14 min</td><td>B2B heavy</td><td><span class="area-badge area-badge--high">HIGH</span></td></tr>
+            <tr><td>16</td><td><strong>Al Garhoud</strong></td><td>12 min</td><td>Corporate</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>17</td><td><strong>Healthcare City</strong></td><td>10 min</td><td>Medical B2B</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>18</td><td><strong>Festival City</strong></td><td>14 min</td><td>Residential</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>19</td><td><strong>Satwa</strong></td><td>12 min</td><td>Residential</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+            <tr><td>20</td><td><strong>Jumeirah</strong></td><td>14 min</td><td>Premium B2C</td><td><span class="area-badge area-badge--medium">MEDIUM</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tier 4 & 5 -->
+      <div class="service-detail__header" style="margin-bottom:16px"><span class="service-detail__tag">Tier 4 & 5 — Extended (15–30km)</span></div>
+      <div style="overflow-x:auto;margin-bottom:32px">
+        <table class="area-table">
+          <thead><tr><th>#</th><th>Area</th><th>Distance</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>21</td><td>Al Quoz</td><td>18 min</td><td>Industrial B2B — warehouses</td></tr>
+            <tr><td>22</td><td>Wafi</td><td>10 min</td><td>High-end residential near L2</td></tr>
+            <tr><td>23</td><td>Rashidiya</td><td>20 min</td><td>Extended east Dubai</td></tr>
+            <tr><td>24</td><td>Mirdif</td><td>22 min</td><td>Large residential</td></tr>
+            <tr><td>25</td><td>International City</td><td>25 min</td><td>Dense expat community</td></tr>
+            <tr><td>26</td><td>Al Qusais</td><td>20 min</td><td>Residential / industrial</td></tr>
+            <tr><td>27</td><td>Muhaisnah</td><td>18 min</td><td>Growing residential</td></tr>
+            <tr><td>28</td><td>Sharjah</td><td>30 min</td><td>Cross-emirate IT visits only</td></tr>
+            <tr><td>29</td><td>JVC</td><td>25 min</td><td>Large residential</td></tr>
+            <tr><td>30</td><td>Al Barsha</td><td>22 min</td><td>Complements L1 coverage</td></tr>
+            <tr><td>31</td><td>Dubai Silicon Oasis</td><td>28 min</td><td>Tech companies — B2B</td></tr>
+            <tr><td>32</td><td>Academic City</td><td>28 min</td><td>Students — refurbished demand</td></tr>
+            <tr><td>33</td><td>Mankhool</td><td>3 min</td><td>Alt name for Al Mankhool</td></tr>
+            <tr><td>34</td><td>Meena Bazaar</td><td>2 min</td><td>Tourist / retail walk-in</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Dubai Creek Harbour CTA -->
+      <div class="creek-cta">
+        <h3>Dubai Creek Harbour — Priority Zone ★</h3>
+        <p>Premium development by Emaar, 10 minutes from IT Center Building. High Apple device ownership, growing population, no local repair competition. Azizi Technologies is the closest quality repair option for Creek Harbour residents.</p>
+        <a href="tel:+971557530104">Call 055 753 0104</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section class="loc-info loc-info--alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-header__tag">Bur Dubai Pages</span>
+        <h2 class="section-header__title">Everything at This Location</h2>
+      </div>
+      <div class="loc-grid">
+        <a href="phone-repair.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">Category 7</div><div class="loc-card__value">Phone Repair</div><div class="loc-card__sub">64 services — iPhone, Samsung, Android</div></a>
+        <a href="electronics-repair.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">Category 6</div><div class="loc-card__value">Electronics Repair</div><div class="loc-card__sub">58 services — Printer, console, tablet, wearables</div></a>
+        <a href="buy-sell.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">Buy & Sell</div><div class="loc-card__value">Buy & Sell Used</div><div class="loc-card__sub">62 services — Trade-in, refurbished, buyback</div></a>
+        <a href="faq-bur-dubai.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">FAQ</div><div class="loc-card__value">25 FAQs</div><div class="loc-card__sub">Hours, pricing, directions, parking, warranty</div></a>
+        <a href="posts.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">GBP Posts</div><div class="loc-card__value">144 Posts</div><div class="loc-card__sub">Full 2026 content calendar — Jan to Dec</div></a>
+        <a href="mega-menu.html" class="loc-card" style="text-decoration:none"><div class="loc-card__label">All Services</div><div class="loc-card__value">862 Services</div><div class="loc-card__sub">All 12 categories across both locations</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact"><div class="container"><div class="contact__inner">
+    <div class="contact__info">
+      <span class="section-header__tag">Walk-In Bur Dubai</span>
+      <h2 class="contact__title">Visit IT Center Building</h2>
+      <p class="contact__sub">Ground floor, G 58. Walk-in any time Mon–Sat 9AM–10PM. No appointment needed. Free diagnosis on all devices.</p>
+      <div class="contact__details">
+        <div class="contact__detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><div><strong>Call / WhatsApp</strong><a href="tel:+971557530104">055 753 0104</a></div></div>
+        <div class="contact__detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><div><strong>Address</strong><span>G 58, IT Center Building, 21 21A St, Bur Dubai</span></div></div>
+        <div class="contact__detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><div><strong>Hours</strong><span>Mon–Sat 9AM–10PM (incl. Fridays)&ensp;|&ensp;Sun: Closed</span></div></div>
+      </div>
+    </div>
+    <form class="contact__form" id="contactForm" action="#" method="POST">
+      <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+      <div class="form-group"><input type="tel" name="phone" placeholder="Phone / WhatsApp" required></div>
+      <div class="form-group"><select name="service" required>
+        <option value="" disabled selected>What do you need?</option>
+        <option value="phone">Phone Repair</option><option value="macbook">MacBook / Laptop</option>
+        <option value="buy-sell">Buy or Sell Device</option><option value="electronics">Electronics</option>
+        <option value="it-support">IT Support</option><option value="other">Other</option>
+      </select></div>
+      <div class="form-group"><textarea name="message" rows="3" placeholder="Describe your issue..."></textarea></div>
+      <button type="submit" class="btn btn--primary btn--full btn--lg">Send Message</button>
+    </form>
+  </div></div></section>
+
+  <footer class="footer"><div class="container"><div class="footer__inner">
+    <div class="footer__brand"><a href="index.html" class="nav__logo"><span class="nav__logo-icon">&#9670;</span> AZIZI <span class="nav__logo-accent">TECHNOLOGIES</span></a><p>IT Center Building, Bur Dubai. Walk-in repair, buy & sell, IT support.</p><p class="footer__address">G 58, 21 21A St, Bur Dubai</p></div>
+    <div class="footer__links"><h4>Bur Dubai</h4><ul><li><a href="bur-dubai.html">Location Info</a></li><li><a href="faq-bur-dubai.html">FAQ (25 Q&As)</a></li><li><a href="posts.html">GBP Posts (144)</a></li><li><a href="phone-repair.html">Phone Repair</a></li><li><a href="electronics-repair.html">Electronics</a></li></ul></div>
+    <div class="footer__links"><h4>All Services</h4><ul><li><a href="mega-menu.html">862 Services Hub</a></li><li><a href="index.html">IT Support</a></li><li><a href="computer-repair.html">Computer Repair</a></li><li><a href="data-recovery.html">Data Recovery</a></li></ul></div>
+    <div class="footer__links"><h4>Contact</h4><ul><li><a href="tel:+971557530104">055 753 0104</a></li><li><a href="mailto:info@azizitechnologies.ae">info@azizitechnologies.ae</a></li><li>Mon–Sat 9AM–10PM</li><li>Near BurJuman Metro</li></ul></div>
+  </div><div class="footer__bottom"><p>&copy; 2026 Azizi Technologies. All rights reserved.</p></div></div></footer>
+
+  <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 15l7-7 7 7"/></svg></a>
+  <script src="script.js"></script>
+</body>
+</html>
