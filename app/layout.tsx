@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import MegaMenu from '@/components/MegaMenu';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <MegaMenu />
+        <Header />
         {children}
         <Footer />
         <Script src="/script.js" strategy="afterInteractive" />
