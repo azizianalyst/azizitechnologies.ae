@@ -49,6 +49,7 @@ export default function BlogPostPage({ params }: Props) {
         </header>
         <div
           className="post-page__content"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
         <footer className="post-page__footer">

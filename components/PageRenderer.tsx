@@ -5,9 +5,9 @@ export default function PageRenderer({ slug }: { slug: string }) {
   return (
     <>
       {page.headExtra && (
-        <div dangerouslySetInnerHTML={{ __html: page.headExtra }} />
+        <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.headExtra }} />
       )}
-      <div dangerouslySetInnerHTML={{ __html: page.body }} />
+      <div suppressHydrationWarning dangerouslySetInnerHTML={{ __html: page.body }} />
     </>
   );
 }
