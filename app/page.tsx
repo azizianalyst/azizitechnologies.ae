@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Icon, { type IconName } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'IT Support & Services Dubai — AMC from AED 800/mo | Azizi Technologies',
@@ -16,13 +17,24 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
-  { href: '/it-support-dubai/', title: 'IT Support Dubai', desc: 'On-site and remote troubleshooting for SMEs, free-zone businesses, and enterprise offices across all Emirates. From help-desk tickets to full-infrastructure recovery.', icon: '🖥️' },
-  { href: '/it-amc-dubai/', title: 'IT AMC Contracts', desc: 'Annual maintenance from AED 800/month with 2-hour SLA, unlimited remote support, monthly on-site visits, patch management, and backup monitoring.', icon: '📋' },
-  { href: '/networking/', title: 'Networking & WiFi', desc: 'Office WiFi deployment, structured cabling, firewall configuration, VPN setup, and managed switch infrastructure for offices from 5 to 500 staff.', icon: '📡' },
-  { href: '/it-security/', title: 'Cybersecurity', desc: 'Endpoint protection, EDR, firewall management, phishing simulation, vulnerability assessments, and ISO-27001 readiness.', icon: '🛡️' },
-  { href: '/data-recovery/', title: 'Data Recovery', desc: 'Hard drive, SSD, RAID, and cloud data recovery. Forensic-grade lab services plus logical-recovery for accidentally deleted files.', icon: '💾' },
-  { href: '/b2b-services/', title: 'B2B Managed IT', desc: 'Fully managed IT departments for companies of 10–500 staff. Includes vCIO quarterly reviews, dedicated engineers, and priority escalation.', icon: '🏢' },
+const services: { href: string; title: string; desc: string; icon: IconName }[] = [
+  { href: '/it-support-dubai/', title: 'IT Support Dubai', desc: 'On-site and remote troubleshooting for SMEs, free-zone businesses, and enterprise offices across all Emirates. From help-desk tickets to full-infrastructure recovery.', icon: 'support' },
+  { href: '/it-amc-dubai/', title: 'IT AMC Contracts', desc: 'Annual maintenance from AED 800/month with 2-hour SLA, unlimited remote support, monthly on-site visits, patch management, and backup monitoring.', icon: 'amc' },
+  { href: '/networking/', title: 'Networking & WiFi', desc: 'Office WiFi deployment, structured cabling, firewall configuration, VPN setup, and managed switch infrastructure for offices from 5 to 500 staff.', icon: 'network' },
+  { href: '/it-security/', title: 'Cybersecurity', desc: 'Endpoint protection, EDR, firewall management, phishing simulation, vulnerability assessments, and ISO-27001 readiness.', icon: 'shield' },
+  { href: '/data-recovery/', title: 'Data Recovery', desc: 'Hard drive, SSD, RAID, and cloud data recovery. Forensic-grade lab services plus logical-recovery for accidentally deleted files.', icon: 'database' },
+  { href: '/b2b-services/', title: 'B2B Managed IT', desc: 'Fully managed IT departments for companies of 10–500 staff. Includes vCIO quarterly reviews, dedicated engineers, and priority escalation.', icon: 'building' },
+];
+
+const trustedIndustries = [
+  'DIFC Financial Firms',
+  'DMCC Traders',
+  'Media City Agencies',
+  'DHA Clinics',
+  'DP World Logistics',
+  'Internet City Tech',
+  'JLT Professional',
+  'Dubai South Cargo',
 ];
 
 const pillars = [
@@ -43,7 +55,7 @@ const industries = [
 
 const process = [
   { step: '01', title: 'Free IT Assessment', desc: 'A senior engineer spends 60–90 minutes on-site (or remote) reviewing your current setup — servers, network, endpoints, backup, security posture. You receive a written report with a red/amber/green risk rating and prioritised recommendations. No obligation, no jargon, no sales pitch.' },
-  { step: '02', title: 'Plan & Proposal', desc: 'Based on the assessment, we propose an AMC tier that fits your team size, risk tolerance, and budget. Every item is itemised: what&apos;s included, what&apos;s excluded, what&apos;s billed separately. Typically within 3 working days.' },
+  { step: '02', title: 'Plan & Proposal', desc: 'Based on the assessment, we propose an AMC tier that fits your team size, risk tolerance, and budget. Every item is itemised: what’s included, what’s excluded, what’s billed separately. Typically within 3 working days.' },
   { step: '03', title: 'Onboarding (Week 1–2)', desc: 'We take over inventory, document your environment in our CMDB, deploy monitoring agents, standardise patch management, and migrate your help-desk channel. You keep using your existing tools during transition — zero disruption.' },
   { step: '04', title: 'Steady-State Operations', desc: 'Your team logs tickets via phone, WhatsApp, or portal. Remote requests answered in 15 minutes during working hours. On-site visits dispatched per SLA. Monthly health reports delivered the first Monday of every month.' },
   { step: '05', title: 'Quarterly Reviews', desc: 'Every three months we meet with your stakeholders — founders, CFO, ops lead — to review tickets, trends, budget, upcoming projects, and technology roadmap. No more surprises at renewal time.' },
@@ -97,28 +109,28 @@ const compliance = [
 
 const faqs = [
   { q: 'How much does IT support in Dubai cost?', a: 'Our IT AMC plans start at AED 800 per month for businesses with up to 10 staff (Starter tier). The Pro tier at AED 2,500/month covers 11–50 staff with 24/7 helpdesk and weekly on-site visits. Enterprise plans for 50+ staff are quoted based on scope. Ad-hoc support (walk-in, per-visit, or emergency) starts from AED 300 per site visit. All prices exclude VAT unless stated.' },
-  { q: 'What exactly is an IT AMC contract?', a: 'An IT Annual Maintenance Contract bundles proactive monitoring, patch management, unlimited remote support, on-site visits, backup monitoring, and SLA-backed response into a fixed monthly fee. It replaces the unpredictable costs of hourly break-fix support with a flat, budgetable price. Our contracts include a clear scope document, agreed SLAs, and monthly health reports so you always know what you&apos;re getting. Most clients save 30–50% versus hourly consultants once total break-fix costs are added up.' },
+  { q: 'What exactly is an IT AMC contract?', a: 'An IT Annual Maintenance Contract bundles proactive monitoring, patch management, unlimited remote support, on-site visits, backup monitoring, and SLA-backed response into a fixed monthly fee. It replaces the unpredictable costs of hourly break-fix support with a flat, budgetable price. Our contracts include a clear scope document, agreed SLAs, and monthly health reports so you always know what you’re getting. Most clients save 30–50% versus hourly consultants once total break-fix costs are added up.' },
   { q: 'Do you support Dubai free zones?', a: 'Yes — we serve DMCC, Dubai Media City, DIFC, Internet City, JLT, TECOM (Design District and Production City), KIZAD, Dubai South, and all mainland areas. Our office at Concord Tower in Media City puts most free zones within sub-30-minute dispatch range. We understand the specific compliance requirements of DIFC regulated firms, DHA clinics, and free-zone incorporated companies.' },
   { q: 'Can you manage Microsoft 365 and Google Workspace?', a: 'Yes. We are experienced with both platforms — licensing and procurement through our Microsoft Cloud Solution Provider relationship, tenant setup and configuration, mailbox and file migrations (including from on-prem Exchange and G Suite legacy), email security hardening (SPF, DKIM, DMARC), Teams and SharePoint configuration, Google Drive and Meet, and ongoing user admin. Many clients mix platforms — e.g. Google for email, Microsoft 365 for Office apps — and we handle that hybrid cleanly.' },
   { q: 'Do you offer cybersecurity services?', a: 'Yes. Our cybersecurity practice covers endpoint protection and EDR (we partner with Sophos, CrowdStrike, and Microsoft Defender for Business), firewall configuration and management (Fortinet, Sophos, Cisco, Meraki, Ubiquiti), vulnerability assessments, phishing simulation and awareness training, dark-web monitoring for your domain credentials, ISO-27001 and SOC-2 readiness, and incident response if you suspect a breach. We can operate as your full managed security provider or augment an existing CISO.' },
   { q: 'How quickly can you respond to an emergency?', a: 'Standard Starter AMC clients get a 4-hour on-site SLA during business hours. Pro tier is 2-hour, Enterprise is 1-hour. Remote response is 15 minutes for Pro and Enterprise. Critical incidents — server down, ransomware, office-wide outage — are treated as priority-1 and an engineer is dispatched immediately during working hours. After-hours on-call is included in Enterprise; Pro clients can add it for a nominal fee.' },
   { q: 'Do you provide hardware procurement and installation?', a: 'Yes. We source and supply laptops, desktops, servers, networking gear, printers, UPS systems, and accessories from our authorised distributor partners (Apple, Dell, HP, Lenovo, Cisco, Ubiquiti, Synology, and more). We handle the full lifecycle — quotation, delivery, unboxing, imaging, asset tagging, joining to domain/Intune, user setup, data migration from the old device, and secure disposal of decommissioned hardware.' },
-  { q: 'Can you help with office relocations?', a: 'Absolutely. Office moves are one of our specialities. We handle site surveys, structured cabling design, WiFi planning, ISP coordination (Etisalat, du), move-day logistics, after-hours cutovers, post-move stabilisation, and punch-list resolution. Typical Dubai office move for a 50-person team: 4–6 weeks planning, 1 weekend for the physical cutover, 1 week of stabilisation. We&apos;ve done moves ranging from 5-person startups to 350-person head offices.' },
+  { q: 'Can you help with office relocations?', a: 'Absolutely. Office moves are one of our specialities. We handle site surveys, structured cabling design, WiFi planning, ISP coordination (Etisalat, du), move-day logistics, after-hours cutovers, post-move stabilisation, and punch-list resolution. Typical Dubai office move for a 50-person team: 4–6 weeks planning, 1 weekend for the physical cutover, 1 week of stabilisation. We’ve done moves ranging from 5-person startups to 350-person head offices.' },
   { q: 'What is included in a free IT assessment?', a: 'Our free IT assessment is a 60–90 minute session (on-site or remote) where a senior engineer reviews your server infrastructure, network topology, endpoint inventory, backup strategy, email security configuration, cybersecurity posture, and cloud subscriptions. You receive a written report with risk ratings (red/amber/green), prioritised recommendations, and indicative costs for any remediation work. There is no obligation to engage us afterward — the report is yours to keep.' },
   { q: 'Do you work with Apple / Mac environments?', a: 'Yes. We are one of the few Dubai IT companies with deep macOS expertise alongside Windows. Our team includes Apple Certified Support Professionals. We support Mac fleets with Jamf, Kandji, or Intune for Mac; handle macOS Sequoia, Ventura, and legacy versions; repair MacBook hardware (logic boards, screens, batteries, keyboards, trackpads); manage Time Machine and enterprise backup; and integrate Macs into mixed-platform Active Directory / Azure AD environments.' },
-  { q: 'What happens if we want to leave?', a: 'AMC contracts are typically 12 months with 60 days notice to cancel. We commit to a documented off-boarding: all documentation, credentials, monitoring access, and configuration exports are handed over to you or your next provider. We don&apos;t hold clients hostage — if we&apos;re not performing, you should leave. This policy is why we retain 95%+ of clients year-over-year.' },
+  { q: 'What happens if we want to leave?', a: 'AMC contracts are typically 12 months with 60 days notice to cancel. We commit to a documented off-boarding: all documentation, credentials, monitoring access, and configuration exports are handed over to you or your next provider. We don’t hold clients hostage — if we’re not performing, you should leave. This policy is why we retain 95%+ of clients year-over-year.' },
   { q: 'Do you provide 24/7 support?', a: 'Pro-tier clients get 24/7 monitoring with automated alerting, plus access to our 24/7 helpdesk portal. Enterprise-tier clients additionally get 24/7 human response with after-hours on-call engineers for critical incidents. Starter-tier is business hours only (Mon–Sat 9 AM – 6 PM). We can bolt on extended-hours support for any plan.' },
-  { q: 'How do you handle data backup and disaster recovery?', a: 'Every AMC includes daily monitored backups — on-prem (Veeam, Synology), cloud (Azure Backup, Wasabi, Backblaze B2), and hybrid combinations. For each client we define an RPO (recovery point objective) and RTO (recovery time objective) based on their tolerance for data loss and downtime. We test restores quarterly for Pro clients and monthly for Enterprise. If disaster strikes, we&apos;ve got documented DR runbooks ready to execute.' },
+  { q: 'How do you handle data backup and disaster recovery?', a: 'Every AMC includes daily monitored backups — on-prem (Veeam, Synology), cloud (Azure Backup, Wasabi, Backblaze B2), and hybrid combinations. For each client we define an RPO (recovery point objective) and RTO (recovery time objective) based on their tolerance for data loss and downtime. We test restores quarterly for Pro clients and monthly for Enterprise. If disaster strikes, we’ve got documented DR runbooks ready to execute.' },
   { q: 'Can you help with VAT and FTA-compliant systems?', a: 'Yes. We have experience configuring, supporting, and integrating UAE VAT-compliant accounting systems (Xero, QuickBooks, Zoho Books, Tally, SAP Business One, Microsoft Dynamics 365 Business Central), point-of-sale systems (Lightspeed, Vend, Foodics), and FTA-mandated reporting tools. Our infrastructure work always considers 5-year record retention and audit-trail requirements.' },
   { q: 'Do you cover locations outside Dubai?', a: 'Yes. While our two offices are in Dubai (Media City and Bur Dubai), we serve clients across all seven Emirates — Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah. For Abu Dhabi and northern Emirates clients we either dispatch engineers from Dubai (with travel time built into SLA) or operate remote-first with a locally contracted break-fix partner for hardware-hands.' },
   { q: 'Are you an authorised Microsoft / Apple / Cisco partner?', a: 'We maintain partner relationships with Microsoft (CSP — Cloud Solution Provider), Cisco Select Partner, Fortinet, Sophos Platinum, Ubiquiti, Synology, and authorised reseller agreements with all major hardware manufacturers. Partner status means warranty work, preferential pricing, direct escalation to vendor support, and certified engineers on our team.' },
   { q: 'How do you handle user onboarding and offboarding?', a: 'For every new hire we provision accounts in your Microsoft 365 or Google Workspace tenant, assign appropriate licensing, configure MFA and conditional access, image a laptop with your standard software stack, deliver it to the new starter, and run a 30-minute walk-through. For leavers we disable accounts, revoke MFA tokens, archive mailboxes per your retention policy, wipe the returned device, rotate any shared credentials, and produce an offboarding checklist for HR. Both processes are documented SLAs in every AMC.' },
   { q: 'What is the difference between AMC and break-fix?', a: 'Break-fix means you call an IT company only when something is already broken, and pay hourly. It is reactive, unpredictable, and usually more expensive once problems accumulate. AMC (Annual Maintenance Contract) is proactive: we prevent issues through monitoring and patching, resolve routine requests at no marginal cost, and absorb most of the risk into a fixed monthly fee. After the first 6–12 months, AMC clients typically spend 30–50% less than they did on break-fix while experiencing far fewer incidents.' },
   { q: 'Do you sign NDAs and data processing agreements?', a: 'Yes. We execute mutual NDAs as standard before any sensitive engagement. For clients handling personal data we sign DPAs (Data Processing Agreements) aligned with UAE Personal Data Protection Law (Federal Decree-Law 45 of 2021) and, for clients with EU touchpoints, GDPR-aligned DPAs. Our standard contract templates are available for legal review before kick-off.' },
-  { q: 'Can you provide references from current clients?', a: 'Yes. Once we&apos;re into the proposal stage and you&apos;d like to validate our claims, we share reference contacts from comparable clients — similar industry, similar size, similar scope. We always ask our reference clients for permission first and rotate which references we put forward to avoid burning any one client out.' },
+  { q: 'Can you provide references from current clients?', a: 'Yes. Once we’re into the proposal stage and you’d like to validate our claims, we share reference contacts from comparable clients — similar industry, similar size, similar scope. We always ask our reference clients for permission first and rotate which references we put forward to avoid burning any one client out.' },
   { q: 'What technology platforms do you support?', a: 'Windows 10/11, Windows Server 2016 through 2025, macOS (Sonoma, Sequoia, and earlier), Linux (Ubuntu, RHEL, Rocky), iOS/iPadOS, Android, ChromeOS. On the cloud side: Microsoft 365, Google Workspace, Azure, AWS, Google Cloud. Networking: Cisco, Meraki, Ubiquiti UniFi, Aruba, Ruckus, Fortinet, Sophos, WatchGuard. Storage: Synology, QNAP, Dell EMC, NetApp. Backup: Veeam, Acronis, Datto. EDR/Security: Microsoft Defender, Sophos, CrowdStrike, SentinelOne. Virtualisation: VMware ESXi, Hyper-V, Proxmox. MDM: Intune, Jamf, Kandji.' },
   { q: 'How does on-boarding work for an existing fleet?', a: 'First we run a discovery phase: we deploy RMM agents, document the environment, interview key stakeholders, and produce a baseline report within 2 weeks. Next we stabilise: we fix any critical red-flags (missing backups, unpatched servers, expired certificates). Then we optimise: standardise tooling, retire legacy systems, and document procedures. All of this runs in parallel with normal support — your team never loses helpdesk coverage during transition.' },
-  { q: 'Can you support a fully remote or hybrid team?', a: 'Absolutely. Many of our clients have distributed teams. We deploy cloud-first Intune or Jamf Mobile Device Management so devices are manageable from anywhere, VPN or zero-trust access (Cloudflare Access, Microsoft Entra Private Access) for internal resources, and unified help-desk channels that don&apos;t require a Dubai VPN connection. Users anywhere in the UAE — or travelling — get the same response as head-office staff.' },
+  { q: 'Can you support a fully remote or hybrid team?', a: 'Absolutely. Many of our clients have distributed teams. We deploy cloud-first Intune or Jamf Mobile Device Management so devices are manageable from anywhere, VPN or zero-trust access (Cloudflare Access, Microsoft Entra Private Access) for internal resources, and unified help-desk channels that don’t require a Dubai VPN connection. Users anywhere in the UAE — or travelling — get the same response as head-office staff.' },
 ];
 
 function jsonLd() {
@@ -200,12 +212,23 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="home-trust" aria-label="Trusted by">
+        <div className="container">
+          <p className="home-trust__label">Trusted by leading businesses across Dubai</p>
+          <div className="home-trust__strip">
+            {trustedIndustries.map((t) => (
+              <span key={t} className="home-trust__badge">{t}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="home-intro" aria-labelledby="intro-heading">
         <div className="container home-intro__inner">
           <div className="home-intro__copy">
             <span className="section-header__eyebrow">About Azizi Technologies</span>
             <h2 id="intro-heading" className="home-intro__title">
-              Dubai&apos;s trusted IT support and managed services partner since 2008
+              Dubai’s trusted IT support and managed services partner since 2008
             </h2>
             <p>
               Azizi Technologies is a Dubai-based <strong>IT support and managed services company</strong> delivering end-to-end technology operations for small and mid-sized businesses, free-zone entities, and enterprise offices across the United Arab Emirates. Since 2008 we have served more than 200 clients ranging from 5-person startups to 350-staff corporate head offices. Our two offices — in <strong>Concord Tower, Dubai Media City</strong>, and the IT Center Building in Bur Dubai — allow us to reach most of Dubai within 30 minutes and the broader UAE within 2 hours.
@@ -217,16 +240,16 @@ export default function Home() {
               Our engineering team covers the full stack of modern business IT. We manage Microsoft 365 and Google Workspace tenants, including licensing through our Microsoft Cloud Solution Provider partnership. We build and secure enterprise networks — structured cabling, WiFi 6 and 6E deployment, firewall configuration (Fortinet, Sophos, Cisco Meraki), VPN, VLAN segmentation, and site-to-site tunnels. We operate Windows Server, Linux, and macOS environments. We deploy Azure, AWS, and on-premises Synology/QNAP NAS platforms. We handle endpoint security, EDR rollouts, phishing simulation, SOC-2 audit prep, and incident response.
             </p>
             <p>
-              Beyond technology, we are known for transparent business practices. Every proposal itemises what&apos;s included and excluded. Every invoice matches the quoted price. We publish our AMC SLA times publicly. We don&apos;t hide behind ticket systems or outsource our helpdesk to overseas call centres — you speak to the same engineers who know your environment. Our retention rate is over 95% year on year, which we believe is the clearest proof that this approach works. If you&apos;re evaluating <strong>IT support companies in Dubai</strong> or looking for a change from your current provider, we&apos;d welcome a free assessment to show you the difference.
+              Beyond technology, we are known for transparent business practices. Every proposal itemises what’s included and excluded. Every invoice matches the quoted price. We publish our AMC SLA times publicly. We don’t hide behind ticket systems or outsource our helpdesk to overseas call centres — you speak to the same engineers who know your environment. Our retention rate is over 95% year on year, which we believe is the clearest proof that this approach works. If you’re evaluating <strong>IT support companies in Dubai</strong> or looking for a change from your current provider, we’d welcome a free assessment to show you the difference.
             </p>
             <p>
               We work across every industry in Dubai — finance and DIFC-regulated firms, law firms and legal services, media and creative production houses in Media City, DHA-licensed healthcare clinics, logistics and shipping operations in Jebel Ali and Dubai South, hospitality chains, retail and F&amp;B, construction and contracting, educational institutions, and free-zone incorporated companies in DMCC, Internet City, TECOM, and JLT. Each industry has its own compliance and operational demands; our process is to understand those first, then design the technology around them — not the other way around.
             </p>
             <p>
-              If you&apos;re searching for <strong>IT services Dubai</strong>, <strong>IT support Dubai</strong>, <strong>managed IT Dubai</strong>, <strong>IT AMC Dubai</strong>, <strong>IT company Dubai</strong>, or any related term, you likely need the same thing: a competent, reliable local partner who picks up the phone, shows up on time, and charges what they quote. That&apos;s what we&apos;ve been doing for 200+ Dubai businesses for 17 years and counting. The best way to evaluate whether we&apos;re the right fit is to book the free IT assessment below — it costs nothing, takes under 90 minutes, and leaves you with a written risk report you can use regardless of whether you engage us or not.
+              If you’re searching for <strong>IT services Dubai</strong>, <strong>IT support Dubai</strong>, <strong>managed IT Dubai</strong>, <strong>IT AMC Dubai</strong>, <strong>IT company Dubai</strong>, or any related term, you likely need the same thing: a competent, reliable local partner who picks up the phone, shows up on time, and charges what they quote. That’s what we’ve been doing for 200+ Dubai businesses for 17 years and counting. The best way to evaluate whether we’re the right fit is to book the free IT assessment below — it costs nothing, takes under 90 minutes, and leaves you with a written risk report you can use regardless of whether you engage us or not.
             </p>
             <p>
-              Technology underpins every modern Dubai business. When it works invisibly, your team shipshape and productive; when it fails, the entire operation grinds to a halt within minutes. Email stops flowing. Sales teams can&apos;t look up customer data. Designers lose hours of work to an unsaved Adobe crash. Warehouse scanners disconnect and pickers wait. Finance teams miss a VAT-return deadline because the accounting server rebooted in the middle of month-end. These are not hypothetical scenarios — we see them every week. The right IT partner is the one who prevents these problems quietly in the background and, when something does go wrong, responds fast enough that the business barely notices. That&apos;s the standard we hold ourselves to, tracked rigorously against the SLA we commit to in every contract.
+              Technology underpins every modern Dubai business. When it works invisibly, your team shipshape and productive; when it fails, the entire operation grinds to a halt within minutes. Email stops flowing. Sales teams can’t look up customer data. Designers lose hours of work to an unsaved Adobe crash. Warehouse scanners disconnect and pickers wait. Finance teams miss a VAT-return deadline because the accounting server rebooted in the middle of month-end. These are not hypothetical scenarios — we see them every week. The right IT partner is the one who prevents these problems quietly in the background and, when something does go wrong, responds fast enough that the business barely notices. That’s the standard we hold ourselves to, tracked rigorously against the SLA we commit to in every contract.
             </p>
           </div>
           <aside className="home-intro__highlights" aria-label="Quick facts">
@@ -257,7 +280,9 @@ export default function Home() {
           <div className="home-services__grid">
             {services.map((s) => (
               <Link key={s.href} href={s.href} className="home-service-card">
-                <div className="home-service-card__icon" aria-hidden>{s.icon}</div>
+                <div className="home-service-card__icon">
+                  <Icon name={s.icon} size={26} />
+                </div>
                 <h3 className="home-service-card__title">{s.title}</h3>
                 <p className="home-service-card__desc">{s.desc}</p>
                 <span className="home-service-card__cta">Learn more →</span>
@@ -275,7 +300,7 @@ export default function Home() {
           <div className="section-header">
             <span className="section-header__eyebrow">Services in depth</span>
             <h2 id="deep-heading" className="section-header__title">What every AMC plan actually includes</h2>
-            <p className="section-header__sub">Technology should be predictable. Here&apos;s exactly what our clients get, day in and day out.</p>
+            <p className="section-header__sub">Technology should be predictable. Here’s exactly what our clients get, day in and day out.</p>
           </div>
 
           <div className="home-deep__block">
@@ -340,8 +365,8 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">Industries we serve</span>
-            <h2 id="industries-heading" className="section-header__title">Deep expertise across Dubai&apos;s key business sectors</h2>
-            <p className="section-header__sub">Every industry has its own compliance requirements, operational rhythm, and technology stack. We&apos;ve built repeatable playbooks for each.</p>
+            <h2 id="industries-heading" className="section-header__title">Deep expertise across Dubai’s key business sectors</h2>
+            <p className="section-header__sub">Every industry has its own compliance requirements, operational rhythm, and technology stack. We’ve built repeatable playbooks for each.</p>
           </div>
           <div className="home-industries__grid">
             {industries.map((i) => (
@@ -446,7 +471,7 @@ export default function Home() {
         <div className="container">
           <div className="section-header">
             <span className="section-header__eyebrow">Client results</span>
-            <h2 id="cases-heading" className="section-header__title">How we&apos;ve helped Dubai businesses</h2>
+            <h2 id="cases-heading" className="section-header__title">How we’ve helped Dubai businesses</h2>
             <p className="section-header__sub">Four real engagements that illustrate how we work in practice. Client names withheld for confidentiality; full references available on request.</p>
           </div>
           <div className="home-cases__grid">
@@ -499,7 +524,7 @@ export default function Home() {
           <div className="section-header">
             <span className="section-header__eyebrow">FAQ</span>
             <h2 id="faq-heading" className="section-header__title">Common questions about IT support in Dubai</h2>
-            <p className="section-header__sub">If your question isn&apos;t covered here, call or WhatsApp us — we answer every enquiry personally.</p>
+            <p className="section-header__sub">If your question isn’t covered here, call or WhatsApp us — we answer every enquiry personally.</p>
           </div>
           <div className="home-faq__list">
             {faqs.map((f, i) => (
@@ -520,7 +545,7 @@ export default function Home() {
               <span className="section-header__eyebrow">Emergency IT Support Dubai</span>
               <h2 id="emergency-heading" className="home-emergency__title">IT emergency right now? We dispatch within 30 minutes.</h2>
               <p>
-                If your server is down, your network is offline, your email is compromised, or you suspect a cybersecurity incident, don&apos;t waste time sending a ticket. <strong>Call 055 753 0104 directly</strong>. During business hours we answer personally within three rings and dispatch an engineer — most emergencies see an engineer on-site within 30 minutes in central Dubai, 60 minutes across greater Dubai, and 2 hours to Abu Dhabi or the northern Emirates. After hours, Enterprise-tier clients have a direct on-call line; Pro-tier clients can add after-hours coverage to their plan for a nominal monthly fee.
+                If your server is down, your network is offline, your email is compromised, or you suspect a cybersecurity incident, don’t waste time sending a ticket. <strong>Call 055 753 0104 directly</strong>. During business hours we answer personally within three rings and dispatch an engineer — most emergencies see an engineer on-site within 30 minutes in central Dubai, 60 minutes across greater Dubai, and 2 hours to Abu Dhabi or the northern Emirates. After hours, Enterprise-tier clients have a direct on-call line; Pro-tier clients can add after-hours coverage to their plan for a nominal monthly fee.
               </p>
               <p>
                 Typical emergencies we handle daily: server crashes and boot failures, ransomware and malware outbreaks, network-wide connectivity loss, Microsoft 365 tenant lockouts, domain controller failures, critical hardware failures (RAID degradation, disk crashes, power supply failures), office-wide WiFi collapse, email account takeovers, data loss from accidental deletion or hardware failure, and ISP outages requiring rapid failover. Our emergency rate card is transparent — AED 500 per site visit for non-AMC clients, included for AMC clients, with clear hourly rates for extended work.
@@ -545,7 +570,7 @@ export default function Home() {
               Many Dubai businesses have tried offshore IT providers — call centres in India, the Philippines, or Europe — and discovered the hidden costs: time-zone gaps mean your 10 AM issue gets picked up at 3 PM, language and cultural barriers add friction, and when hardware actually breaks, nobody is physically available to help. Local Dubai IT support eliminates these frictions. An engineer who speaks your business language, works your hours, can walk into your office within two hours, and understands the specific infrastructure providers (Etisalat, du, Virgin Mobile UAE), the free-zone ecosystem, and the regulatory environment you operate in is worth many multiples of the per-hour rate difference.
             </p>
             <p>
-              Azizi Technologies has spent 17 years building relationships with the local providers your business depends on. We know which Etisalat account manager to call when a fibre line is down. We have spares on the shelves of our Bur Dubai office so a failed router or switch can be swapped same-day without waiting for a Jebel Ali customs clearance. Our engineers carry Mobile Health certificates for healthcare clients and DIFC security passes for financial clients. We speak English, Arabic, Hindi, and Urdu — covering the working languages of virtually every Dubai business. Most importantly, we&apos;re local people you can meet, shake hands with, and build trust with over time. That&apos;s a level of service offshore providers structurally cannot match.
+              Azizi Technologies has spent 17 years building relationships with the local providers your business depends on. We know which Etisalat account manager to call when a fibre line is down. We have spares on the shelves of our Bur Dubai office so a failed router or switch can be swapped same-day without waiting for a Jebel Ali customs clearance. Our engineers carry Mobile Health certificates for healthcare clients and DIFC security passes for financial clients. We speak English, Arabic, Hindi, and Urdu — covering the working languages of virtually every Dubai business. Most importantly, we’re local people you can meet, shake hands with, and build trust with over time. That’s a level of service offshore providers structurally cannot match.
             </p>
           </div>
         </div>
@@ -556,7 +581,7 @@ export default function Home() {
           <div className="home-contact__copy">
             <h2 id="contact-heading" className="home-contact__title">Get a Free IT Assessment</h2>
             <p className="home-contact__sub">
-              We&apos;ll review your current setup, flag risks, and propose a plan — no obligation, no jargon, no sales pressure. Most assessments complete in under 90 minutes and the written report is yours to keep whether you engage us or not.
+              We’ll review your current setup, flag risks, and propose a plan — no obligation, no jargon, no sales pressure. Most assessments complete in under 90 minutes and the written report is yours to keep whether you engage us or not.
             </p>
             <div className="home-contact__details">
               <a href="tel:+971557530104" className="home-contact__detail">📞 055 753 0104</a>
