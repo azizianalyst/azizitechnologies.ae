@@ -212,6 +212,29 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="home-stats" aria-label="Impact">
+        <div className="container">
+          <div className="home-stats__grid">
+            <div className="home-stats__cell">
+              <div className="home-stats__num">200<span>+</span></div>
+              <div className="home-stats__label">Active AMC clients across Dubai &amp; the UAE</div>
+            </div>
+            <div className="home-stats__cell">
+              <div className="home-stats__num">17<span>+</span></div>
+              <div className="home-stats__label">Years operating in Dubai — established 2008</div>
+            </div>
+            <div className="home-stats__cell">
+              <div className="home-stats__num">95<span>%</span></div>
+              <div className="home-stats__label">Client retention rate year on year</div>
+            </div>
+            <div className="home-stats__cell">
+              <div className="home-stats__num">15<span>min</span></div>
+              <div className="home-stats__label">Average remote response time, business hours</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="home-trust" aria-label="Trusted by">
         <div className="container">
           <p className="home-trust__label">Trusted by leading businesses across Dubai</p>
@@ -277,17 +300,54 @@ export default function Home() {
             <h2 id="services-heading" className="section-header__title">Complete IT services for Dubai businesses</h2>
             <p className="section-header__sub">Six focused service lines. 862 individual services. One contract, one invoice, one responsible partner. Each service line is delivered by specialists — not generalists — and coordinated through your dedicated account manager.</p>
           </div>
-          <div className="home-services__grid">
-            {services.map((s) => (
-              <Link key={s.href} href={s.href} className="home-service-card">
-                <div className="home-service-card__icon">
-                  <Icon name={s.icon} size={26} />
-                </div>
-                <h3 className="home-service-card__title">{s.title}</h3>
-                <p className="home-service-card__desc">{s.desc}</p>
-                <span className="home-service-card__cta">Learn more →</span>
-              </Link>
-            ))}
+          <div className="bento">
+            <Link href={services[0].href} className="bento__cell bento__cell--hero">
+              <div className="bento__icon">
+                <Icon name={services[0].icon} size={34} />
+              </div>
+              <div className="bento__tag">Most common</div>
+              <h3 className="bento__title">{services[0].title}</h3>
+              <p className="bento__desc">{services[0].desc}</p>
+              <span className="bento__cta">Explore IT Support →</span>
+              <div className="bento__shine" aria-hidden />
+            </Link>
+            <Link href={services[1].href} className="bento__cell bento__cell--accent">
+              <div className="bento__icon">
+                <Icon name={services[1].icon} size={28} />
+              </div>
+              <h3 className="bento__title">{services[1].title}</h3>
+              <p className="bento__desc">From AED 800/month. SLA-backed, flat-fee IT maintenance that replaces break-fix bills.</p>
+              <span className="bento__cta">See AMC plans →</span>
+            </Link>
+            <Link href={services[3].href} className="bento__cell">
+              <div className="bento__icon">
+                <Icon name={services[3].icon} size={26} />
+              </div>
+              <h3 className="bento__title">{services[3].title}</h3>
+              <p className="bento__desc">EDR, firewall, phishing simulation, and ISO-27001 readiness for Dubai businesses.</p>
+            </Link>
+            <Link href={services[2].href} className="bento__cell">
+              <div className="bento__icon">
+                <Icon name={services[2].icon} size={26} />
+              </div>
+              <h3 className="bento__title">{services[2].title}</h3>
+              <p className="bento__desc">WiFi, structured cabling, firewall, VPN — built for 5 to 500-staff offices.</p>
+            </Link>
+            <Link href={services[4].href} className="bento__cell">
+              <div className="bento__icon">
+                <Icon name={services[4].icon} size={26} />
+              </div>
+              <h3 className="bento__title">{services[4].title}</h3>
+              <p className="bento__desc">Hard drive, SSD, RAID, and cloud data recovery — forensic-grade lab services.</p>
+            </Link>
+            <Link href={services[5].href} className="bento__cell bento__cell--wide">
+              <div className="bento__icon">
+                <Icon name={services[5].icon} size={28} />
+              </div>
+              <h3 className="bento__title">{services[5].title}</h3>
+              <p className="bento__desc">Fully managed IT departments for companies of 10–500 staff. vCIO quarterly reviews, dedicated engineers, priority escalation.</p>
+              <span className="bento__cta">Explore B2B →</span>
+            </Link>
           </div>
           <div className="home-services__footer">
             <Link href="/services/" className="btn btn--outline">View all 862 services →</Link>
@@ -474,12 +534,19 @@ export default function Home() {
             <h2 id="cases-heading" className="section-header__title">How we’ve helped Dubai businesses</h2>
             <p className="section-header__sub">Four real engagements that illustrate how we work in practice. Client names withheld for confidentiality; full references available on request.</p>
           </div>
-          <div className="home-cases__grid">
-            {caseStudies.map((c) => (
-              <div key={c.title} className="home-case">
-                <h3 className="home-case__title">{c.title}</h3>
-                <p className="home-case__desc">{c.desc}</p>
-              </div>
+          <div className="home-cases__list">
+            {caseStudies.map((c, i) => (
+              <article key={c.title} className={`home-case home-case--${i % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="home-case__visual" aria-hidden>
+                  <div className="home-case__num">#{String(i + 1).padStart(2, '0')}</div>
+                  <div className="home-case__accent" />
+                </div>
+                <div className="home-case__body">
+                  <div className="home-case__label">Client outcome</div>
+                  <h3 className="home-case__title">{c.title}</h3>
+                  <p className="home-case__desc">{c.desc}</p>
+                </div>
+              </article>
             ))}
           </div>
         </div>
