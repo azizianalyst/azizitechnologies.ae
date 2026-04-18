@@ -2,26 +2,26 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  /* Simple CloudSprout Theme — 3 colors */
-  --primary: #2faffb;
-  --primary-dark: #1a9ae6;
-  --primary-light: rgba(47,175,251,.08);
-  --accent: #92fe65;
-  --accent-dark: #7ae550;
-  --dark: #0e1932;
-  --dark-2: #213356;
-  --dark-3: #394766;
-  --gray-1: #394766;
-  --gray-2: #657087;
-  --gray-3: #9CA3AF;
-  --gray-4: #d9dfe5;
-  --gray-5: #eaf3fd;
-  --gray-6: #f4f8fc;
-  --white: #fcfcfc;
-  --red: #b82105;
-  --orange: #f7630c;
-  --amber: #f5a524;
-  --green: #13612e;
+  /* Azizi Technologies brand palette — matches live WordPress site */
+  --primary: #3182CE;
+  --primary-dark: #2B6CB0;
+  --primary-light: rgba(49,130,206,.08);
+  --accent: #F76A0C;
+  --accent-dark: #DD5A00;
+  --dark: #1A202C;
+  --dark-2: #2D3748;
+  --dark-3: #4A5568;
+  --gray-1: #4A5568;
+  --gray-2: #718096;
+  --gray-3: #A0AEC0;
+  --gray-4: #CBD5E0;
+  --gray-5: #E2E8F0;
+  --gray-6: #EDF2F7;
+  --white: #ffffff;
+  --red: #E53E3E;
+  --orange: #F76A0C;
+  --amber: #ECC94B;
+  --green: #38A169;
   --radius: 15px;
   --radius-sm: 10px;
   --radius-lg: 20px;
