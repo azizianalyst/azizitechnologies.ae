@@ -87,6 +87,11 @@ export default function MegaMenu() {
         </button>
 
         <ul className={`nav__links ${mobileOpen ? 'nav__links--open' : ''}`}>
+          <li>
+            <Link href="/" onClick={() => setMobileOpen(false)}>
+              Home
+            </Link>
+          </li>
           <li className="mega">
             <button
               className="nav__dropdown-btn"
