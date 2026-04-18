@@ -94,6 +94,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Azizi Technologies. All rights reserved.
             &nbsp;·&nbsp;
             <a href="tel:+971557530104">Call 055 753 0104</a>
+            &nbsp;·&nbsp;
+            <a href="/sitemap.xml">Sitemap</a>
           </p>
         </div>
       </div>
