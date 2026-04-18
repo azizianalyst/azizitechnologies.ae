@@ -4,30 +4,53 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const servicesMenu = [
-  { heading: 'Popular', links: [
+  { heading: 'IT Services', links: [
     { href: '/it-support-dubai/', label: 'IT Support Dubai' },
     { href: '/it-amc-dubai/', label: 'IT AMC Contracts' },
-    { href: '/b2b-services/', label: 'Managed IT / B2B' },
+    { href: '/b2b-services/', label: 'B2B / Managed IT' },
+    { href: '/it-consulting/', label: 'IT Consulting' },
     { href: '/it-security/', label: 'Cybersecurity' },
+    { href: '/computer-service/', label: 'Computer Service' },
   ]},
-  { heading: 'Repair', links: [
+  { heading: 'Computer Repair', links: [
+    { href: '/computer-repair/', label: 'Computer Repair' },
+    { href: '/computer-repair-services-dubai/', label: 'Computer Repair Dubai' },
     { href: '/laptop-repair-dubai/', label: 'Laptop Repair' },
-    { href: '/macbook-repair-dubai/', label: 'MacBook Repair' },
     { href: '/imac-repair-dubai/', label: 'iMac Repair' },
+    { href: '/macbook-repair-dubai/', label: 'MacBook Repair' },
+    { href: '/microsoft-surface-repair-dubai/', label: 'Surface Repair' },
+  ]},
+  { heading: 'MacBook', links: [
+    { href: '/macbook-screen-replacement-dubai/', label: 'Screen Replacement' },
+    { href: '/macbook-battery-replacement-dubai/', label: 'Battery Replacement' },
+    { href: '/macbook-keyboard-replacement-dubai/', label: 'Keyboard Replacement' },
+    { href: '/macbook-logic-board-repair/', label: 'Logic Board Repair' },
+    { href: '/macbook-ssd-upgrade/', label: 'MacBook SSD Upgrade' },
+    { href: '/mac-ssd-upgrade-dubai/', label: 'Mac SSD Upgrade' },
+  ]},
+  { heading: 'Phones / Electronics', links: [
     { href: '/phone-repair/', label: 'Phone Repair' },
     { href: '/screen-repair/', label: 'Screen Repair' },
+    { href: '/electronics-repair/', label: 'Electronics Repair' },
   ]},
-  { heading: 'Infrastructure', links: [
+  { heading: 'Network / Data', links: [
     { href: '/networking/', label: 'Networking' },
     { href: '/wifi-support-dubai/', label: 'WiFi Support' },
-    { href: '/data-recovery-dubai/', label: 'Data Recovery' },
-    { href: '/computer-service/', label: 'Computer Service' },
-    { href: '/it-consulting/', label: 'IT Consulting' },
+    { href: '/wifi-technician-dubai/', label: 'WiFi Technician' },
+    { href: '/data-recovery/', label: 'Data Recovery' },
+    { href: '/data-recovery-dubai/', label: 'Data Recovery Dubai' },
   ]},
-  { heading: 'Buy & Sell', links: [
+  { heading: 'Buy & Sell · Company', links: [
+    { href: '/buy-sell/', label: 'Buy & Sell Used' },
     { href: '/sell-iphone-dubai/', label: 'Sell iPhone' },
     { href: '/sell-macbook-dubai/', label: 'Sell MacBook' },
-    { href: '/buy-sell/', label: 'Buy & Sell Used' },
+    { href: '/about-us/', label: 'About Us' },
+    { href: '/contact-us/', label: 'Contact' },
+    { href: '/reviews/', label: 'Reviews' },
+    { href: '/faqs/', label: 'FAQ' },
+    { href: '/bur-dubai/', label: 'Bur Dubai Branch' },
+    { href: '/faq-bur-dubai/', label: 'FAQ Bur Dubai' },
+    { href: '/posts/', label: 'Blog (90+ posts)' },
   ]},
 ];
 
@@ -113,6 +136,12 @@ export default function Header() {
                 </svg>
               </button>
               <div className={`hdr-services__panel ${servicesOpen ? 'hdr-services__panel--open' : ''}`}>
+                <div className="hdr-services__footer">
+                  <span>Browse every service — both the new category pages and the dedicated Dubai service pages.</span>
+                  <Link href="/services/" className="hdr-services__footer-cta" onClick={() => { setServicesOpen(false); setMobileOpen(false); }}>
+                    View all 862 services →
+                  </Link>
+                </div>
                 <div className="hdr-services__inner">
                   {servicesMenu.map((col) => (
                     <div key={col.heading} className="hdr-services__col">
@@ -131,18 +160,6 @@ export default function Header() {
                       </ul>
                     </div>
                   ))}
-                  <div className="hdr-services__col hdr-services__col--cta">
-                    <div className="hdr-services__heading">Browse</div>
-                    <Link href="/services/" className="hdr-services__cta" onClick={() => { setServicesOpen(false); setMobileOpen(false); }}>
-                      All 862 services →
-                    </Link>
-                    <Link href="/faqs/" className="hdr-services__cta hdr-services__cta--muted" onClick={() => { setServicesOpen(false); setMobileOpen(false); }}>
-                      FAQ →
-                    </Link>
-                    <Link href="/bur-dubai/" className="hdr-services__cta hdr-services__cta--muted" onClick={() => { setServicesOpen(false); setMobileOpen(false); }}>
-                      Bur Dubai branch →
-                    </Link>
-                  </div>
                 </div>
               </div>
             </div>
