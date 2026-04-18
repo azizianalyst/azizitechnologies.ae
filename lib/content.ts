@@ -25,6 +25,10 @@ const LINK_REWRITES: Record<string, string> = {
   'data-recovery.html': '/data-recovery/',
   'networking.html': '/networking/',
   'buy-sell.html': '/buy-sell/',
+  'about-us.html': '/about-us/',
+  'contact-us.html': '/contact-us/',
+  'reviews.html': '/reviews/',
+  'it-amc-dubai.html': '/it-amc-dubai/',
 };
 
 export function loadPage(slug: string): PageContent {

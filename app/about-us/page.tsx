@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import PageRenderer, { pageMetadata } from '@/components/PageRenderer';
 
-export const metadata: Metadata = pageMetadata('index');
+export const metadata: Metadata = pageMetadata('about-us');
 
 export default function Page() {
-  return <PageRenderer slug="index" />;
+  return <PageRenderer slug="about-us" />;
 }
