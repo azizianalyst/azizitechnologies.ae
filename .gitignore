@@ -24,3 +24,4 @@ npm-debug.log*
 # Claude local
 .claude/settings.local.json
 .claude/launch.json
+azizitechnologies-ae-deploy.zip
