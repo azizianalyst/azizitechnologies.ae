@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="footer__links">
             <h4>IT &amp; Business</h4>
             <ul>
-              <li><Link href="/">IT Support (94)</Link></li>
+              <li><Link href="/it-support-dubai/">IT Support (94)</Link></li>
               <li><Link href="/b2b-services/">B2B IT Services (58)</Link></li>
               <li><Link href="/it-consulting/">IT Consulting (62)</Link></li>
             </ul>

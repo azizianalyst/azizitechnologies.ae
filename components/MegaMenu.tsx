@@ -12,7 +12,7 @@ const COLUMNS: MenuColumn[] = [
   {
     heading: 'IT & Business',
     links: [
-      { href: '/', label: 'IT Support & Services', count: 94 },
+      { href: '/it-support-dubai/', label: 'IT Support & Services', count: 94 },
       { href: '/b2b-services/', label: 'B2B IT Services', count: 58 },
       { href: '/it-consulting/', label: 'IT Consulting', count: 62 },
     ],
